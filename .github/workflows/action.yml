@@ -1,4 +1,4 @@
-name: "Terraform-Kafka-Config Module"
+name: "Terraform-MongoDB-User Module"
 
 on:
   pull_request:
