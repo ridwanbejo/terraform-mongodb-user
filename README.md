@@ -196,7 +196,7 @@ There are some scenarios that you could choose by using this module. For example
 1. lorem ipsum sit dolor amet
 2. lorem ipsum sit dolor amet
 3. lorem ipsum sit dolor amet
-4. lorem ipsum sit dolor amet 
+4. lorem ipsum sit dolor amet
 
 ## D. Ensuring quality
 

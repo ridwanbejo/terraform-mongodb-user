@@ -1,7 +1,7 @@
 mongodb_roles = [
   {
-    name       = "developer"
-    role_db    = "admin"
+    name    = "developer"
+    role_db = "admin"
     privileges = [
       {
         target_db  = "admin"
@@ -11,7 +11,7 @@ mongodb_roles = [
       {
         target_db  = "reporting"
         collection = ""
-        actions    = [
+        actions = [
           "listCollections",
           "createCollection",
           "createIndex",
@@ -25,8 +25,8 @@ mongodb_roles = [
     ]
   },
   {
-    name       = "guest"
-    role_db    = "admin"
+    name    = "guest"
+    role_db = "admin"
     privileges = [
       {
         target_db  = "admin"
@@ -36,9 +36,9 @@ mongodb_roles = [
       {
         target_db  = "reporting"
         collection = "*"
-        actions    = [
+        actions = [
           "listCollections",
-          ]
+        ]
       },
     ]
   },
@@ -78,6 +78,6 @@ mongodb_users = [
   {
     name          = "bejo"
     auth_database = "reporting"
-    roles = []
+    roles         = []
   },
 ]
