@@ -2,7 +2,7 @@
 
 This is a Terraform module for managing user access at MongoDB. You can use this module both for commercial or non-commercial purposes.
 
-Currently, you can manage these resources in MySQL by using this module:
+Currently, you can manage these resources in MongoDB by using this module:
 
 - users
 - roles
@@ -16,6 +16,7 @@ Tested in:
 Requirements:
 
 - Terraform with version >= 1.4
+- Kaginari/mongodb
 - Hashicorp/random
 
 ## B. How to use this module for your Terraform project ?
@@ -186,88 +187,16 @@ mysql_users = {
 }
 ```
 
-You will see at your MySQL that users and databases are created once the terraform applied.
+You will see at your MongoDB that users and roles are created once the terraform applied.
 
 ## C. Understanding tfvars scenarios
 
 There are some scenarios that you could choose by using this module. For example:
 
-1. You might want to create the database with default collation and charset:
-
-```
-mysql_databases = [
-  {
-    name = "toko_jam_tangan"
-  },
-]
-```
-
-2. You can also create database by with different collation and charset:
-
-```
-mysql_databases = [
-  {
-    name                  = "toko_mobil"
-    default_character_set = "utf8"
-    default_collation     = "utf8_general_ci"
-  },
-  {
-    name = "toko_baju"
-  },
-  {
-    name = "toko_cat"
-  },
-  {
-    name = "toko_jam_tangan"
-  },
-]
-```
-
-3. You can create user without grant
-
-```
-mysql_users = [
-  {
-    user = "jeffry"
-    host = "localhost"
-    grant = {
-      database = ""
-      privileges = []
-    }
-  },
-]
-```
-
-4. You can create users with grant option also
-
-```
-mysql_users = [
-  {
-    user = "puguh"
-    host = "localhost"
-    grant = {
-      database = "toko_jam_tangan",
-      privileges = ["SELECT", "UPDATE"]
-    }
-  },
-  {
-    user = "panji"
-    host = "localhost"
-    grant = {
-      database = "toko_baju",
-      privileges = ["SELECT", "UPDATE", "DELETE"]
-    }
-  },
-  {
-    user = "alam"
-    host = "localhost"
-    grant = {
-      database = "toko_mobil",
-      privileges = ["SELECT", "UPDATE", "DELETE", "DROP"]
-    }
-  },
-]
-```
+1. lorem ipsum sit dolor amet
+2. lorem ipsum sit dolor amet
+3. lorem ipsum sit dolor amet
+4. lorem ipsum sit dolor amet
 
 ## D. Ensuring quality
 
@@ -291,8 +220,8 @@ The tools:
 
 ## E. How to contribute ?
 
-If you find any issue, you can raise it here at our [Issue Tracker](https://github.com/ridwanbejo/terraform-mysql-admin/issues)
+If you find any issue, you can raise it here at our [Issue Tracker](https://github.com/ridwanbejo/terraform-mongodb-user/issues)
 
-If you have something that you want to merge to this repo, just raise [Pull Requests](https://github.com/ridwanbejo/terraform-mysql-admin/pulls)
+If you have something that you want to merge to this repo, just raise [Pull Requests](https://github.com/ridwanbejo/terraform-mongodb-user/pulls)
 
 Ensure that you install all the tools from section D. for development purpose.

@@ -1,7 +1,7 @@
 variable "roles" {
   type = list(object({
-    name       = string
-    role_db    = string
+    name    = string
+    role_db = string
     privileges = list(object({
       target_db  = string
       collection = string
